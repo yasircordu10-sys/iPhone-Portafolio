@@ -1,0 +1,189 @@
+html, body {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  position: absolute;
+  pointer-events: none;
+}
+
+#tableBlackjack {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#gameWindow {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  font-size: min(4.5vw, 3.2vh);
+}
+
+.mazo {
+  display: grid;
+  grid-template-columns: repeat(13, 5.6em);
+  gap: 0.6em;
+  padding: 1.2em;
+  background: #1b6b3a;
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute; top: 0; left: 0;
+}
+
+.carta {
+  width: 5.6em;
+  height: 7.8em;
+  background: white;
+  border: 0.12em solid #d0d0d0;
+  border-radius: 0.6em;
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: #111;
+  pointer-events: none;
+}
+
+.carta.corazones,
+.carta.diamantes {
+  color: #c81d25;
+}
+
+.carta .valor {
+  position: absolute;
+  top: 0.35em;
+  left: 0.5em;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.carta .simbolo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4em;
+}
+
+.carta.back {
+  background: #333;
+  color: #fff;
+}
+
+.manoJugador, .manoDealer {
+  display: flex;
+  gap: 0.6em;
+
+}
+
+#manoJugador, #manoDealer {
+  padding: 0.6em;
+  border-radius: 0.6em;
+}
+
+#manoJugador{
+  position: absolute;
+  bottom: 3.2em;
+  background: rgba(230, 8, 8, 0.5);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+#manoDealer {
+  position: absolute;
+  top: 2.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(8, 8, 230, 0.5);
+}
+
+.mensaje-final {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+.mensaje-final.gano {
+  color: #78ffac;
+}
+
+.mensaje-final.perdio {
+  color: #ff5252;
+}
+
+.mensaje-final.empate {
+  color: #ffd54f;
+}
+
+.botones {
+  position: absolute;
+  bottom: 0.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8em;
+
+}
+
+.btn {
+  padding: 0.4em 0.7em;
+  font-size: 1em;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  white-space: nowrap;
+}
+
+
+.btn:hover {
+  opacity: 0.8;
+  animation: hoverAnimation 0.5s ease-in-out;
+
+}
+@keyframes hoverAnimation {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.btn#btnPedir {
+  background-color: #4CAF50; /* Verde */
+}
+.btn#btnPlantarse {
+  background-color: #ff9800; /* Naranja */
+}
+.btn#btnReiniciar {
+  background-color: #f44336; /* Rojo */
+}
+
+.btn:active {
+  transform: scale(0.95);
+}

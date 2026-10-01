@@ -1,0 +1,100 @@
+.home-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5em;
+  padding: 3em 2em;
+  align-content: center;
+}
+
+.app-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em;
+  cursor: pointer;
+}
+
+.app-icon .icon {
+  display: block;
+  width: 4.6em;
+  height: 4.6em;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.2em;
+}
+
+.app-icon .label {
+  font-size: 0.95em;
+  color: white;
+}
+
+.app-icon[data-app="calculator"] .icon {
+  background-image: url('../icons/calculadora.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.app-icon[data-app="blackjack"] .icon {
+  background-image: url('../icons/blackjack.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.app-icon[data-app="amazon"] .icon {
+  background-image: url('../icons/amazon.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.app-icon[data-app="cv"] .icon {
+  background-image: url('../icons/cv.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.app-screens {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.app-screen {
+  display: none;
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.app-screen.active {
+  display: block;
+  pointer-events: auto;
+}
+
+.back-btn {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  z-index: 5;
+}
+
+.app-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+/* El header de Amazon usa position: fixed dentro de su propia página,
+   así que empujamos todo el iframe hacia abajo para que el logo y el
+   carrito no queden pegados a la isla dinámica. La barra de búsqueda
+   se mueve junto con el resto, sin perder su tamaño. */
+.app-frame-amazon {
+  top: 2.2em;
+  height: calc(100% - 2.2em);
+}

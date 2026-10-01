@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blackjack.css">
+    <title>Blackjack</title>
+  </head>
+  <body>
+    <div id="gameWindow">
+      <img id="tableBlackjack" src="imagenes/mesa-blackjack.jpg">
+
+      <!-- Botones -->
+      <div class="botones">
+        <button id="btnPedir" class="btn">Pedir</button>
+        <button id="btnPlantarse" class="btn">Plantarse</button>
+        <button id="btnReiniciar" class="btn">Reiniciar</button>
+      </div>
+
+
+      <!-- Manos -->
+        <div class="manoJugador" id="manoJugador"></div>
+        <div class="manoDealer" id="manoDealer"></div>
+        <div class="mensaje-final"></div>
+      <div class="mazo">
+
+        <!-- picas -->
+        <div class="carta picas">
+          <span class="valor">A</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">2</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">3</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">4</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">5</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">6</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">7</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">8</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">9</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">10</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">J</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">Q</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+        <div class="carta picas">
+          <span class="valor">K</span>
+          <span class="simbolo">&spades;</span>
+        </div>
+
+        <!-- corazones -->
+        <div class="carta corazones">
+          <span class="valor">A</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">2</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">3</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">4</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">5</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">6</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">7</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">8</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">9</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">10</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">J</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">Q</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+        <div class="carta corazones">
+          <span class="valor">K</span>
+          <span class="simbolo">&hearts;</span>
+        </div>
+    
+        <!-- diamantes -->
+        <div class="carta diamantes">
+          <span class="valor">A</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">2</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">3</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">4</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">5</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">6</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">7</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">8</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">9</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">10</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">J</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">Q</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+        <div class="carta diamantes">
+          <span class="valor">K</span>
+          <span class="simbolo">&diams;</span>
+        </div>
+
+        <!-- treboles -->
+        <div class="carta treboles">
+          <span class="valor">A</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">2</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">3</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">4</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">5</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">6</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">7</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">8</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">9</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">10</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">J</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">Q</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta treboles">
+          <span class="valor">K</span>
+          <span class="simbolo">&clubs;</span>
+        </div>
+        <div class="carta back">
+          <span class="valor">?</span>
+          <span class="simbolo">?</span>
+        </div>
+    </div>
+    <script src="blackjack.js" defer></script>
+  </body>
+</html>

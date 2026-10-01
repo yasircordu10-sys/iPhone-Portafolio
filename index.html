@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <title>Iphone 14 Dynamic Island</title>
+</head>
+
+<body>
+
+  <input type="radio" name="theme" id="deep-purple" checked="checked">
+  <input type="radio" name="theme" id="gold">
+  <input type="radio" name="theme" id="space-black">
+  <input type="radio" name="theme" id="silver">
+
+  <div class="iphone">
+    <div class="buttons">
+      <div class="left">
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+      </div>
+      <div class="right">
+        <div class="button"></div>
+      </div>
+    </div>
+    <div class="camera"></div>
+    <div class="screen-container">
+      <div class="bg">
+        <div class="deep-purple">
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+        </div>
+        <div class="gold">
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+        </div>
+        <div class="space-black">
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+        </div>
+        <div class="silver">
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+          <div class="section">
+            <div class="glow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="home-screen">
+        <div class="app-icon" data-app="calculator">
+          <span class="icon"></span>
+          <span class="label">Calculadora</span>
+        </div>
+        <div class="app-icon" data-app="blackjack">
+          <span class="icon"></span>
+          <span class="label">Blackjack</span>
+        </div>
+        <div class="app-icon" data-app="amazon">
+          <span class="icon"></span>
+          <span class="label">AmazonasPrimo</span>
+        </div>
+        <div class="app-icon" data-app="cv">
+          <span class="icon"></span>
+          <span class="label">CV</span>
+        </div>
+      </div>
+      <div class="app-screens">
+        <div class="app-screen" id="calculator-app">
+          <button class="back-btn">←</button>
+          <iframe class="app-frame" src="apps/calculadora/calculadora.html" title="Calculadora"></iframe>
+        </div>
+        <div class="app-screen" id="blackjack-app">
+          <button class="back-btn">←</button>
+          <iframe class="app-frame" src="apps/blackjack/blackjack.html" title="Blackjack"></iframe>
+        </div>
+        <div class="app-screen" id="amazon-app">
+          <button class="back-btn">←</button>
+          <iframe class="app-frame app-frame-amazon" src="apps/amazon/amazon.html" title="AmazonasPrimo"></iframe>
+        </div>
+        <div class="app-screen" id="cv-app">
+          <button class="back-btn">←</button>
+          <div class="cv-viewer">
+            <img src="cv/CV.png.png" alt="CV de Ian Cordoncillo" class="cv-image">
+            <a href="cv/Ian_Cordoncillo_Urena_.pdf" download class="cv-download">Descargar CV (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notch-container" tabindex="0">
+      <div class="notch">
+        <div class="content">
+          <div class="left">
+            <div class="title"></div>
+            <div class="text"></div>
+          </div>
+          <div class="right">
+            <div class="bar">
+              <div class="duration"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notch-blur"></div>
+  </div>
+
+  <div class="pallette">
+    <label for="deep-purple" class="swatch"></label>
+    <label for="gold" class="swatch"></label>
+    <label for="space-black" class="swatch"></label>
+    <label for="silver" class="swatch"></label>
+  </div>
+
+  <script src="scripts/apps.js" defer></script>
+  <script>
+  document.querySelector('.cv-image').addEventListener('click', function () {
+    this.classList.toggle('zoomed');
+  });
+</script>
+
+</body>
+
+</html>
