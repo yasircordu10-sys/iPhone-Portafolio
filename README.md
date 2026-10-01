@@ -2,7 +2,7 @@
 
 Simulación funcional de un iPhone construida desde cero con **HTML, CSS y JavaScript** — sin frameworks. Cada app dentro del teléfono es un proyecto independiente, integrado dentro del dispositivo mediante `iframe`.
 
-🔗 **Demo en vivo:** [link cuando actives GitHub Pages]
+🔗 **Demo en vivo:** (https://yasircordu10-sys.github.io/iPhone-Portafolio/)
 
 ## Apps incluidas
 
